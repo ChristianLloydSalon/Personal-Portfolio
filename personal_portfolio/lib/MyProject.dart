@@ -62,7 +62,7 @@ class MyProject extends StatelessWidget {
                           }
                         },
                       ),
-                      // only display the Divider() if i is not equal to Projects.list.length - 1
+                      // only display the Divider() if a project to be displayed is not the last project in the list
                       if (i != Projects.items.length - 1) ...[
                         // Divider
                         Divider(
