@@ -78,7 +78,7 @@ class UserProfile extends StatelessWidget {
           SizedBox(
             width: (kIsWeb) ? 20 : 10,
           ),
-          // 1 - Iamge
+          // 1 - Image
           // 0 - Name and Position
           (kIsWeb) ? _widgets[1] : _widgets[0],
         ],
