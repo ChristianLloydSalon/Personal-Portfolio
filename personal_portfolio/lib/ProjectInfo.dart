@@ -12,8 +12,6 @@ class ProjectInfo extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    bool isLandScaped =
-        MediaQuery.of(context).orientation == Orientation.landscape;
     return (kIsWeb)
         // Project Info Web view
         ? ((_project == null)
@@ -35,12 +33,10 @@ class ProjectInfo extends StatelessWidget {
         // Project Info Mobile View
         : SafeArea(
             child: Scaffold(
-              appBar: (isLandScaped)
-                  ? null
-                  : AppBar(
-                      title: Text(_project!.Title),
-                      backgroundColor: Colors.blue,
-                    ),
+              appBar: AppBar(
+                title: Text(_project!.Title),
+                backgroundColor: Colors.blue,
+              ),
               body: _details(context),
             ),
           );
