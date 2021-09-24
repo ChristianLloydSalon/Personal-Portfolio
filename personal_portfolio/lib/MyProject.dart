@@ -69,8 +69,8 @@ class MyProject extends StatelessWidget {
                           height: 10,
                           thickness: 2,
                           color: Colors.black,
-                          indent: MediaQuery.of(context).size.width * 0.1,
-                          endIndent: MediaQuery.of(context).size.width * 0.1,
+                          indent: MediaQuery.of(context).size.width * 0.05,
+                          endIndent: MediaQuery.of(context).size.width * 0.05,
                         ),
                       ]
                     ],
