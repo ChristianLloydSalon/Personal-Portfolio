@@ -13,6 +13,7 @@ class UserProfile extends StatelessWidget {
               (kIsWeb) ? MainAxisAlignment.end : MainAxisAlignment.start,
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
+            // Name
             Container(
               child: Text(
                 'Christian Lloyd Salon',
@@ -23,11 +24,13 @@ class UserProfile extends StatelessWidget {
               ),
             ),
             if (kIsWeb) ...[
+              // Divider
               Divider(
-                thickness: 2,
+                thickness: 5,
                 color: Colors.black,
               ),
             ],
+            // Position
             Container(
               child: Text(
                 'Software Engineer Trainee',

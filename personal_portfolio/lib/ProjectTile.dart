@@ -26,11 +26,7 @@ class ProjectTile extends StatelessWidget {
       subtitle: Text(_project.Subheader),
       tileColor: Colors.grey,
       leading: this._icon,
-      trailing: Icon(Icons.arrow_forward_ios),
       mouseCursor: SystemMouseCursors.click,
-      shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.circular(10),
-      ),
     );
   }
 }
