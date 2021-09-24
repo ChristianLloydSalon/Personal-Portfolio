@@ -17,6 +17,7 @@ class ProjectInfo extends StatelessWidget {
         ? ((_project == null)
             // No item selected
             ? Expanded(
+                flex: 2,
                 child: Container(
                   child: Center(
                     child: Text(
@@ -29,7 +30,7 @@ class ProjectInfo extends StatelessWidget {
                 ),
               )
             // if item is selected, display the project's details
-            : Expanded(child: _details(context)))
+            : Expanded(flex: 2, child: _details(context)))
         // Project Info Mobile View
         : SafeArea(
             child: Scaffold(

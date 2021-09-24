@@ -26,7 +26,7 @@ class UserProfile extends StatelessWidget {
             if (kIsWeb) ...[
               // Divider
               Divider(
-                thickness: 5,
+                thickness: 2,
                 color: Colors.black,
               ),
             ],

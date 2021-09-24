@@ -93,7 +93,7 @@ class __WebViewState extends State<_WebView> {
                         // vertical divider
                         VerticalDivider(
                           width: 20,
-                          thickness: 5,
+                          thickness: 2,
                           color: Colors.black,
                         ),
                         // project info (right)
