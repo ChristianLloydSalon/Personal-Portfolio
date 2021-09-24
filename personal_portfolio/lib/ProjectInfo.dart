@@ -82,6 +82,7 @@ class ProjectInfo extends StatelessWidget {
                     // Details
                     Text(
                       _project!.Details,
+                      textAlign: TextAlign.justify,
                       style: TextStyle(
                         fontSize: (kIsWeb) ? 28 : 18,
                       ),

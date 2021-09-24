@@ -20,9 +20,9 @@ abstract class Projects {
       title: 'E-Sched',
       subheader: "My client's thesis.",
       details:
-          'A windows application that creates a summary of data that helps electrical engineers ' +
-              'know the equipment ratings and their contribution to the overall power consumption in ' +
-              'an installation.',
+          'A schedule of loads windows application that creates a summary of data that helps ' +
+              'electrical engineers know the equipment ratings and their contribution to the ' +
+              'overall power consumption in an installation.',
       image: Image.asset('images/E-Sched.png'),
       icon: Image.asset('images/schedule-icon.png'),
     ),
