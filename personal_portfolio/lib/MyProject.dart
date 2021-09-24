@@ -8,9 +8,9 @@ import 'package:personal_portfolio/Projects.dart';
 class MyProject extends StatelessWidget {
   late void Function() _function;
 
-  late Project? _currentProject = null;
+  late Project _currentProject;
 
-  Project? get CurrentProject => this._currentProject;
+  Project get CurrentProject => this._currentProject;
 
   void set ChangeState(void Function() function) {
     this._function = function;
@@ -27,9 +27,9 @@ class MyProject extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
-            // My Project Text
+            // My Projects Text
             Text(
-              'My Project',
+              'My Projects',
               style: TextStyle(fontSize: (kIsWeb) ? 48 : 36),
             ),
             // Space

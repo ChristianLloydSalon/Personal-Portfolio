@@ -29,8 +29,24 @@ class _WebView extends StatefulWidget {
 }
 
 class __WebViewState extends State<_WebView> {
+  // class for the list of projects
   MyProject _myProject = MyProject();
-  Project? _current;
+
+  // current project in the screen
+  late Project _current;
+
+  @override
+  void initState() {
+    super.initState();
+    _current = Project(
+      title: '',
+      subheader: '',
+      details: 'Select an item on the left to view',
+      image: Image.asset('images/hydra-logo.jpg'),
+      icon: Image.asset('images/hydra-logo.jpg'),
+    );
+    _myProject.ChangeState = ChangeInfo;
+  }
 
   void ChangeInfo() {
     setState(() {
@@ -39,16 +55,8 @@ class __WebViewState extends State<_WebView> {
   }
 
   @override
-  void initState() {
-    super.initState();
-    _current = _myProject.CurrentProject;
-    _myProject.ChangeState = ChangeInfo;
-  }
-
-  @override
   Widget build(BuildContext context) {
     double width = MediaQuery.of(context).size.width;
-
     return Scaffold(
       body: LayoutBuilder(
         builder: (BuildContext context, BoxConstraints constraints) {
@@ -59,11 +67,13 @@ class __WebViewState extends State<_WebView> {
               color: Colors.black,
               height: double.infinity,
               child: Center(
-                child: Text(
-                  'Expand to View',
-                  style: TextStyle(
-                    color: Colors.white,
-                    fontSize: 50,
+                child: FittedBox(
+                  child: Text(
+                    'Expand to View',
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 50,
+                    ),
                   ),
                 ),
               ),
@@ -135,6 +145,7 @@ class _MobileView extends StatelessWidget {
               UserProfile(),
               // Divider
               Divider(
+                height: 10,
                 indent: 20,
                 endIndent: 20,
                 thickness: 2,

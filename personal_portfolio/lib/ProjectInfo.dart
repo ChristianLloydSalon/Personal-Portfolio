@@ -4,9 +4,9 @@ import 'package:personal_portfolio/Project.dart';
 
 // Details about the project
 class ProjectInfo extends StatelessWidget {
-  Project? _project;
+  late Project _project;
 
-  ProjectInfo({Key? key, required Project? project}) : super(key: key) {
+  ProjectInfo({Key? key, required Project project}) : super(key: key) {
     this._project = project;
   }
 
@@ -14,28 +14,12 @@ class ProjectInfo extends StatelessWidget {
   Widget build(BuildContext context) {
     return (kIsWeb)
         // Project Info Web view
-        ? ((_project == null)
-            // No item selected
-            ? Expanded(
-                flex: 2,
-                child: Container(
-                  child: Center(
-                    child: Text(
-                      'Select an item on the left to view',
-                      style: TextStyle(
-                        fontSize: 20,
-                      ),
-                    ),
-                  ),
-                ),
-              )
-            // if item is selected, display the project's details
-            : Expanded(flex: 2, child: _details(context)))
+        ? Expanded(flex: 2, child: _details(context))
         // Project Info Mobile View
         : SafeArea(
             child: Scaffold(
               appBar: AppBar(
-                title: Text(_project!.Title),
+                title: Text(_project.Title),
                 backgroundColor: Colors.blue,
               ),
               body: _details(context),
@@ -53,7 +37,7 @@ class ProjectInfo extends StatelessWidget {
           if (kIsWeb) ...[
             // Title
             Text(
-              _project!.Title,
+              _project.Title,
               style: TextStyle(fontSize: 48),
             ),
             // Space
@@ -73,7 +57,7 @@ class ProjectInfo extends StatelessWidget {
                       height: 300,
                       child: FittedBox(
                         fit: BoxFit.fill,
-                        child: _project!.Picture,
+                        child: _project.Picture,
                       ),
                     ),
                     // Space
@@ -82,7 +66,7 @@ class ProjectInfo extends StatelessWidget {
                     ),
                     // Details
                     Text(
-                      _project!.Details,
+                      _project.Details,
                       textAlign: TextAlign.justify,
                       style: TextStyle(
                         fontSize: (kIsWeb) ? 28 : 18,
